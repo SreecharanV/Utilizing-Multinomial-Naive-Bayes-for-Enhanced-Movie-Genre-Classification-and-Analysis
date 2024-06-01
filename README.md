@@ -1,81 +1,71 @@
-# Utilizing Multinomial Naive Bayes for Enhanced Movie Genre Classification and Analysis
+# Netflix Movie Genre Classification
 
-This project applies the Multinomial Naive Bayes classifier to predict movie genres based on various metadata, including descriptions and ratings. The dataset is sourced from Kaggle. Detailed analysis and visualizations are provided below.
+This repository contains a project focused on classifying movie genres using the Multinomial Naive Bayes classifier. The goal is to improve genre classification accuracy, thus enhancing recommendation systems for streaming platforms like Netflix.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Workflow Diagram](#workflow-diagram)
-- [Related Work](#related-work)
-- [Data Abstraction](#data-abstraction)
-- [Task Description](#task-description)
-- [Tools Description](#tools-description)
-- [Visualization Graphs](#visualization-graphs)
-- [References](#references)
-- [Links](#links)
+1. [Introduction](#introduction)
+2. [Dataset](#dataset)
+3. [Model](#model)
+4. [Results](#results)
+5. [References](#references)
 
 ## Introduction
 
-This project aims to classify movies into genres using the Multinomial Naive Bayes classifier, leveraging various factors such as descriptions, ratings, and metadata. The goal is to enhance content recommendation systems by accurately predicting movie genres.
+In the constantly developing multimedia entertainment industry, particularly classifying movies into genres is a challenging yet essential task for more effective user suggestions and content management. This project provides a unique approach to this issue through using the Multinomial Naive Bayes classifier on a mixed and diverse movie dataset.
+<img src="Images/Workflow.jpg" alt="Workflow" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+## Dataset
 
-## Workflow Diagram
-<img src="Images/Workflow.jpg" alt="Workflow Diagram" style="width: 80%;">
+The dataset used in this project is sourced from Kaggle. It contains a comprehensive collection of movie and TV show data from Netflix, including titles, directors, actors, country, year, and descriptions.
 
-The workflow diagram illustrates the steps taken in our project, starting from data acquisition to preprocessing, analysis, visualization, and reporting. The data was obtained from Kaggle, cleaned, and prepared for detailed exploratory data analysis (EDA).
+- [Netflix Dataset on Kaggle](https://www.kaggle.com/datasets/ginnyshai/netflix-dataset)
 
-## Related Work
+## Model
 
-Exploring movie genre classification trends is essential for understanding the industry's dynamics. Several studies have focused on different machine learning approaches and their effectiveness in classification tasks, providing a foundation for our analysis.
+The Multinomial Naive Bayes classifier is particularly suited for this project due to its effectiveness in text classification and handling of categorical data. The model is trained on movie descriptions, leveraging the Term Frequency-Inverse Document Frequency (TF-IDF) vectorization method to convert text data into numerical format.
 
-## Data Abstraction
+### Environment Setup
 
-The dataset used for this project is in CSV format, containing various attributes like movie titles, descriptions, ratings, and genres. It includes 8,807 entries, offering a comprehensive view of Netflix's movie catalog.
+- **Python**: 3.8 or newer
+- **Libraries**:
+    - Pandas
+    - NumPy
+    - Scikit-learn
+    - Matplotlib
+    - Seaborn
+    - Jupyter Notebook
 
-## Task Description
+## Results
 
-### Target Audience
+The model was evaluated using various metrics such as accuracy, precision, recall, and F1-score. The Multinomial Naive Bayes classifier showed high precision in genre classification and outperformed traditional methods like Decision Trees, K-Nearest Neighbors, and Support Vector Machines.
 
-Our primary audience includes data scientists, machine learning enthusiasts, and professionals in the multimedia entertainment industry. This project provides insights into improving genre classification for better content recommendations.
+### Visualization
 
-### Actions
+Visualizations such as confusion matrices, bar plots, and line graphs were used to illustrate the model's performance. These visualizations help in understanding the strengths and limitations of the classifier.
 
-The main actions performed in this project include data acquisition, preprocessing, analysis, visualization, and reporting. These steps transform raw data into actionable insights that enhance movie genre classification.
+**Confusion Matrix**
+<img src="Images/CM1.png" alt="CM1" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+<img src="Images/CM2.png" alt="CM2" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+**Accuracy Comparision between MNN and KNN**
+<img src="Images/COMP.png" alt="Accuracy Comparision" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+**Correlation B/W Genre Frequency and Model Accuracy**
+<img src="Images/SP.png" alt="Genre Frequency and Model Accuracy" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+**MNB Accuracy**
+<img src="Images/ACC.png" alt="Accuracy" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
 
-## Tools Description
-
-### Data Processing & Visualization Tools
-
-- **Python:** For data analysis and processing.
-- **Pandas:** For data handling and manipulation.
-- **Matplotlib and Seaborn:** For creating visualizations.
-- **Jupyter Notebook:** For interactive coding and visualization.
-- **Kaggle:** For dataset acquisition.
-
-## Visualization Graphs
-
-### 1. Movie Genre Distribution
-<img src="Images/1.png" alt="Movie Genre Distribution" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
-Distribution of movies across different genres.
-
-### 2. Movie Ratings by Genre
-<img src="Images/2.png" alt="Movie Ratings by Genre" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
-Analysis of movie ratings across various genres.
-
-### 3. Genre Prediction Accuracy
-<img src="Images/3.png" alt="Genre Prediction Accuracy" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
-Accuracy of genre prediction using Multinomial Naive Bayes.
 
 ## References
 
-1. [Data Science 2023 Review: Trends and Salary Expectations](https://www.smithhanley.com/2023/12/05/data-science-2023/)
-2. [Data Science & AI Professionals Salary and Hiring Trends](https://www.burtchworks.com/industry-insights/new-report-data-science-ai-professionals-salary-and-hiring-trends)
-3. [Salary Trends: What to Expect in Data & Analytics Roles in 2024](https://www.linkedin.com/pulse/salary-trends-what-expect-data-analytics-roles-2024-douglas-robertson/)
-4. [Trends in Data Science Salaries: An Exploratory Data Analysis Journey](https://medium.com/@ry4ntr1/trends-in-data-science-salaries-an-exploratory-data-analysis-journey-9b70b75be48e)
-5. [EDA and Visualizations on Data Science Salaries using Python](https://www.linkedin.com/pulse/eda-visualizations-data-science-salaries-using-python-krishnamohan/)
-6. A. Kaur, D. Verma, and N. Kaur, "Utilizing Quantitative Data Science Salary Analysis to Predict Job Salaries," 2022 2nd International Conference on Innovative Sustainable Computational Technologies (CISCT), Dehradun, India, 2022, pp. 1-4. [IEEE](https://ieeexplore.ieee.org/document/10046491)
-7. Tee, Zhen & Raheem, Mafas. (2022). Salary Prediction in Data Science Field Using Specialized Skills and Job Benefits - A Literature Review. [ResearchGate](https://www.researchgate.net/publication/362280362_Salary_Prediction_in_Data_Science_Field_Using_Specialized_Skills_and_Job_Benefits_-A_Literature_Review)
-
-## Links
-
-- [Kaggle Dataset](https://www.kaggle.com/datasets/ginnyshai/netflix-dataset)
-- [GitHub Repository](https://github.com/your-repo-link)
+1. [Collaborative Filtering Recommender System Based on Memory Based in Twitter Using Decision Tree Learning Classification](https://ieeexplore.ieee.org/document/10055248)
+2. [A comprehensive survey on support vector machine classification: Applications, challenges and trends](https://dblp.org/rec/journals/ijon/CervantesGRC20.html)
+3. [A multimodal approach for multi-label movie genre classification](https://link.springer.com/article/10.1007/s11042-020-10086-2)
+4. [A Movie Recommendation System Design Using Association Rules Mining and Classification Techniques](https://wseas.com/journals/articles.php?id=6857)
+5. [Multinomial Naїve Bayes for Documents Classification and Natural Language Processing (NLP)](https://towardsdatascience.com/multinomial-na%C3%AFve-bayes-for-documents-classification-and-natural-language-processing-nlp-e08cc848ce6)
+6. [Installing Jupyter](https://jupyter.org/install)
+7. [Anaconda Software Distribution](https://docs.anaconda.com/)
+8. [Pandas Library](https://pandas.pydata.org/)
+9. [NumPy The fundamental package for scientific computing with Python](https://numpy.org/)
+10. [scikit-learn: Machine Learning in Python](https://scikit-learn.org/stable/index.html)
+11. [Matplotlib: Visualization with Python](https://matplotlib.org/)
+12. [seaborn: statistical data visualization](https://seaborn.pydata.org/)
+13. [Multilabel Genre Prediction Using Deep-Learning Frameworks](https://www.mdpi.com/2076-3417/13/15/8665)
