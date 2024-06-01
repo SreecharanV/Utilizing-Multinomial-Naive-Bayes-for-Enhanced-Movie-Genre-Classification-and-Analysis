@@ -44,13 +44,21 @@ The model was evaluated using various metrics such as accuracy, precision, recal
 Visualizations such as confusion matrices, bar plots, and line graphs were used to illustrate the model's performance. These visualizations help in understanding the strengths and limitations of the classifier.
 
 **Confusion Matrix**
+
 <img src="Images/CM1.png" alt="CM1" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+
 <img src="Images/CM2.png" alt="CM2" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+
 **Accuracy Comparision between MNN and KNN**
+
 <img src="Images/COMP.png" alt="Accuracy Comparision" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+
 **Correlation B/W Genre Frequency and Model Accuracy**
+
 <img src="Images/SP.png" alt="Genre Frequency and Model Accuracy" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
+
 **MNB Accuracy**
+
 <img src="Images/ACC.png" alt="Accuracy" style="width: 600px; display: block; margin-left: auto; margin-right: auto;">
 
 
